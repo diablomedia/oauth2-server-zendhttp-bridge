@@ -30,11 +30,11 @@ class Response extends BaseResponse implements ResponseInterface
         $this->setStatusCode($statusCode);
         $this->addParameters(
             array_filter(
-                array(
+                [
                     'error'             => $name,
                     'error_description' => $description,
                     'error_uri'         => $uri,
-                )
+                ]
             )
         );
     }
@@ -44,13 +44,13 @@ class Response extends BaseResponse implements ResponseInterface
         $this->setStatusCode($statusCode);
         $this->addParameters(
             array_filter(
-                array(
+                [
                     'error'             => $error,
                     'error_description' => $errorDescription,
                     'error_uri'         => $errorUri,
-                )
+                ]
             )
         );
-        $this->addHttpHeaders(array('Location' => $url));
+        $this->addHttpHeaders(['Location' => $url]);
     }
 }

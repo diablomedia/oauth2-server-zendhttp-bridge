@@ -39,6 +39,18 @@ class Request extends BaseRequest implements RequestInterface
 
     public static function createFromRequest(BaseRequest $request)
     {
-        return new static($request->getQuery(), $request->getPost(), array(), $request->getCookie(), $request->getFiles(), $request->getServer(), $request->getContent());
+        $new = static::fromString($request->toString());
+        $new->setQuery($request->getQuery());
+        $new->setPost($request->getPost());
+        $new->setCookies($request->getCookie());
+        $new->setFiles($request->getFiles());
+        $new->setServer($request->getServer());
+        $new->setContent($request->getContent());
+        $new->setEnv($request->getEnv());
+
+        $headers = $request->getHeaders();
+        $new->setHeaders($headers);
+
+        return $new;
     }
 }
