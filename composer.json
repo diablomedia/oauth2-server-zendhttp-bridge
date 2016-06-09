@@ -18,7 +18,7 @@
     ],
     "homepage": "http://github.com/diablomedia/oauth2-server-zendhttp-bridge",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "zendframework/zend-http": "^2.0",
         "bshaffer/oauth2-server-php": "^1.0"
     },
