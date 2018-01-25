@@ -7,15 +7,22 @@ cache:
     - $HOME/.composer/cache
     - vendor
 
+branches:
+  only:
+    master
+
 matrix:
   fast_finish: true
   include:
-    - php: 5.5
     - php: 5.6
     - php: 7
+    - php: 7.1
+    - php: 7.2
+    - php: nightly
     - php: hhvm
   allow_failures:
     - php: hhvm
+    - php: nightly
 
 before_install:
   - composer self-update
@@ -24,4 +31,7 @@ install:
   - travis_retry composer install --no-interaction --ignore-platform-reqs
 
 script:
-  - ./vendor/bin/phpunit
+  - ./vendor/bin/phpunit --coverage-clover=./clover.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -f ./clover.xml
