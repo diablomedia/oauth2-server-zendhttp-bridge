@@ -1,8 +1,14 @@
 <?php
 
-// Needed to get styleci-bridge loaded
-require_once __DIR__.'/vendor/sllh/php-cs-fixer-styleci-bridge/autoload.php';
+$finder = PhpCsFixer\Finder::create()
+    ->exclude('vendor')
+    ->in(__DIR__)
+;
 
-use SLLH\StyleCIBridge\ConfigBridge;
-
-return ConfigBridge::create();
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@PSR2' => true,
+        'array_syntax' => ['syntax' => 'short'],
+    ])
+    ->setFinder($finder)
+;
