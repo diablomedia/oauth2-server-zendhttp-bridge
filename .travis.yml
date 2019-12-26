@@ -29,22 +29,22 @@ stages:
   - style check
   - phpstan analysis
 
-  jobs:
-    fast_finish: true
-    allow_failures:
-      - php: nightly
-    include:
-      - php: 7.2
-      - php: 7.3
-      - php: 7.4
-      - php: nightly
+jobs:
+  fast_finish: true
+  allow_failures:
+    - php: nightly
+  include:
+    - php: 7.2
+    - php: 7.3
+    - php: 7.4
+    - php: nightly
 
-      - stage: style check
-        php: 7.3
-        script:
-          - composer style-check
+    - stage: style check
+      php: 7.3
+      script:
+        - composer style-check
 
-      - stage: phpstan analysis
-        php: 7.3
-        script:
-          - composer phpstan
+    - stage: phpstan analysis
+      php: 7.3
+      script:
+        - composer phpstan
