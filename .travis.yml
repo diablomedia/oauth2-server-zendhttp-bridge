@@ -14,18 +14,13 @@ branches:
 matrix:
   fast_finish: true
   include:
-    - php: 5.6
-    - php: 7
     - php: 7.1
     - php: 7.2
+    - php: 7.3
+    - php: 7.4
     - php: nightly
-    - php: hhvm
   allow_failures:
-    - php: hhvm
     - php: nightly
-
-before_install:
-  - composer self-update
 
 install:
   - travis_retry composer install --no-interaction --ignore-platform-reqs

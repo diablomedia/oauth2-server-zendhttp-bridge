@@ -4,11 +4,10 @@ namespace OAuth2Test\ZendHttpPhpEnvironmentBridge;
 
 use Zend\Http\PhpEnvironment\Request as BaseRequest;
 use OAuth2\ZendHttpPhpEnvironmentBridge\Request;
-use PHPUnit_Framework_TestCase;
 
-class RequestTest extends PHPUnit_Framework_TestCase
+class RequestTest extends \PHPUnit\Framework\TestCase
 {
-    public function setup()
+    public function setup(): void
     {
         $this->baseRequest = BaseRequest::fromString("GET /index.php?test=true HTTP/1.1\r\n\r\nSome Content");
         $serverVars = $this->baseRequest->getServer();
