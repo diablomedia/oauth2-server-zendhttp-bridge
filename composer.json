@@ -35,6 +35,7 @@
     },
     "scripts": {
         "test": "phpunit",
-        "phpstan": "phpstan analyze -c phpstan.neon --no-progress --ansi"
+        "phpstan": "phpstan analyze -c phpstan.neon --no-progress --ansi",
+        "style-check": "php-cs-fixer fix --dry-run -vv"
     }
 }

@@ -2,6 +2,10 @@ sudo: false
 
 language: php
 
+env:
+  global:
+    - COMPOSER_DISCARD_CHANGES=1
+
 cache:
   directories:
     - $HOME/.composer/cache
@@ -11,16 +15,6 @@ branches:
   only:
     master
 
-matrix:
-  fast_finish: true
-  include:
-    - php: 7.2
-    - php: 7.3
-    - php: 7.4
-    - php: nightly
-  allow_failures:
-    - php: nightly
-
 install:
   - travis_retry composer install --no-interaction --ignore-platform-reqs
 
@@ -29,3 +23,29 @@ script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f ./clover.xml
+
+stages:
+  - test
+  - style check
+  - phpstan analysis
+
+  jobs:
+    fast_finish: true
+    allow_failures:
+      - php: nightly
+    include:
+      - php: 7.2
+      - php: 7.3
+      - php: 7.4
+      - php: 7.4
+      - php: nightly
+
+      - stage: style check
+        php: 7.3
+        script:
+          - composer style-check
+
+      - stage: phpstan analysis
+        php: 7.3
+        script:
+          - composer phpstan
