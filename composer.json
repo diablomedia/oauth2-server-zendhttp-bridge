@@ -23,13 +23,19 @@
         "bshaffer/oauth2-server-php": "^1.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.0",
-        "phpunit/PHPUnit": "^5.0"
+        "friendsofphp/php-cs-fixer": "2.16.1",
+        "phpstan/phpstan": "0.12.3",
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-0": {"OAuth2\\ZendHttpPhpEnvironmentBridge": "src/"}
     },
     "autoload-dev": {
         "psr-0": {"OAuth2Test\\ZendHttpPhpEnvironmentBridge": "test/"}
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyze -c phpstan.neon --no-progress --ansi",
+        "style-check": "php-cs-fixer fix --dry-run -vv"
     }
 }

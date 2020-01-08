@@ -7,6 +7,9 @@ use OAuth2\ResponseInterface;
 
 class Response extends BaseResponse implements ResponseInterface
 {
+    /**
+     * @return void
+     */
     public function addParameters(array $parameters)
     {
         if ($this->content) {
@@ -15,6 +18,9 @@ class Response extends BaseResponse implements ResponseInterface
         $this->setContent($parameters);
     }
 
+    /**
+     * @return void
+     */
     public function addHttpHeaders(array $httpHeaders)
     {
         $this->getHeaders()->addHeaders($httpHeaders);

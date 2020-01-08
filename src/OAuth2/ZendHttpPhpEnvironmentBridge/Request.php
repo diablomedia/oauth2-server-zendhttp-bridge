@@ -37,6 +37,9 @@ class Request extends BaseRequest implements RequestInterface
         return $this->getQuery();
     }
 
+    /**
+     * @return Request
+     */
     public static function createFromRequest(BaseRequest $request)
     {
         $new = static::fromString($request->toString());

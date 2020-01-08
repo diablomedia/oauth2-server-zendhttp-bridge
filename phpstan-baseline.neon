@@ -1,0 +1,12 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$object of function method_exists expects object\\|string, ArrayIterator\\|bool\\|Zend\\\\Http\\\\Header\\\\HeaderInterface\\|Zend\\\\Http\\\\Headers given\\.$#"
+			count: 1
+			path: src/OAuth2/ZendHttpPhpEnvironmentBridge/Request.php
+
+		-
+			message: "#^Parameter \\#1 \\$headers of method Zend\\\\Http\\\\AbstractMessage\\:\\:setHeaders\\(\\) expects Zend\\\\Http\\\\Headers, ArrayIterator\\|bool\\|Zend\\\\Http\\\\Header\\\\HeaderInterface\\|Zend\\\\Http\\\\Headers given\\.$#"
+			count: 1
+			path: src/OAuth2/ZendHttpPhpEnvironmentBridge/Request.php
+
