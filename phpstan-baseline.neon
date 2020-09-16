@@ -1,12 +1,12 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Parameter \\#1 \\$object of function method_exists expects object\\|string, ArrayIterator\\|bool\\|Zend\\\\Http\\\\Header\\\\HeaderInterface\\|Zend\\\\Http\\\\Headers given\\.$#"
+			message: "#^Parameter \\#1 \\$object of function method_exists expects object\\|string, ArrayIterator\\|bool\\|Laminas\\\\Http\\\\Header\\\\HeaderInterface\\|Laminas\\\\Http\\\\Headers given\\.$#"
 			count: 1
-			path: src/OAuth2/ZendHttpPhpEnvironmentBridge/Request.php
+			path: src/OAuth2/LaminasHttpPhpEnvironmentBridge/Request.php
 
 		-
-			message: "#^Parameter \\#1 \\$headers of method Zend\\\\Http\\\\AbstractMessage\\:\\:setHeaders\\(\\) expects Zend\\\\Http\\\\Headers, ArrayIterator\\|bool\\|Zend\\\\Http\\\\Header\\\\HeaderInterface\\|Zend\\\\Http\\\\Headers given\\.$#"
+			message: "#^Parameter \\#1 \\$headers of method Laminas\\\\Http\\\\AbstractMessage\\:\\:setHeaders\\(\\) expects Laminas\\\\Http\\\\Headers, ArrayIterator\\|bool\\|Laminas\\\\Http\\\\Header\\\\HeaderInterface\\|Laminas\\\\Http\\\\Headers given\\.$#"
 			count: 1
-			path: src/OAuth2/ZendHttpPhpEnvironmentBridge/Request.php
+			path: src/OAuth2/LaminasHttpPhpEnvironmentBridge/Request.php
 
