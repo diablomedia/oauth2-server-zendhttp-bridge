@@ -1,10 +1,17 @@
 {
     "name": "diablomedia/oauth2-server-zendhttp-bridge",
-    "description": "A bridge to Zend\\Http for oauth2-server-php",
-    "keywords": ["oauth", "oauth2", "auth", "zf2", "zendframework"],
+    "description": "A bridge to Laminas\\Http for oauth2-server-php",
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "auth",
+        "zf2",
+        "zendframework",
+        "laminas"
+    ],
     "type": "library",
     "license": "MIT",
-    "authors":[
+    "authors": [
         {
             "name": "Ari Pringle",
             "email": "ari@diablomedia.com",
@@ -19,7 +26,7 @@
     "homepage": "http://github.com/diablomedia/oauth2-server-zendhttp-bridge",
     "require": {
         "php": ">=5.6.0",
-        "zendframework/zend-http": "^2.0",
+        "laminas/laminas-http": "^2.0",
         "bshaffer/oauth2-server-php": "^1.0"
     },
     "require-dev": {
@@ -28,10 +35,14 @@
         "phpunit/phpunit": "^8.0"
     },
     "autoload": {
-        "psr-0": {"OAuth2\\ZendHttpPhpEnvironmentBridge": "src/"}
+        "psr-0": {
+            "OAuth2\\LaminasHttpPhpEnvironmentBridge": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-0": {"OAuth2Test\\ZendHttpPhpEnvironmentBridge": "test/"}
+        "psr-0": {
+            "OAuth2Test\\LaminasHttpPhpEnvironmentBridge": "test/"
+        }
     },
     "scripts": {
         "test": "phpunit",

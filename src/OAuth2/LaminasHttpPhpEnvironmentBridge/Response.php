@@ -1,8 +1,8 @@
 <?php
 
-namespace OAuth2\ZendHttpPhpEnvironmentBridge;
+namespace OAuth2\LaminasHttpPhpEnvironmentBridge;
 
-use Zend\Http\PhpEnvironment\Response as BaseResponse;
+use Laminas\Http\PhpEnvironment\Response as BaseResponse;
 use OAuth2\ResponseInterface;
 
 class Response extends BaseResponse implements ResponseInterface

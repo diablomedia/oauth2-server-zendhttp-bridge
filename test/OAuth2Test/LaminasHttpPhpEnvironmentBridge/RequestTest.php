@@ -1,9 +1,9 @@
 <?php
 
-namespace OAuth2Test\ZendHttpPhpEnvironmentBridge;
+namespace OAuth2Test\LaminasHttpPhpEnvironmentBridge;
 
-use Zend\Http\PhpEnvironment\Request as BaseRequest;
-use OAuth2\ZendHttpPhpEnvironmentBridge\Request;
+use Laminas\Http\PhpEnvironment\Request as BaseRequest;
+use OAuth2\LaminasHttpPhpEnvironmentBridge\Request;
 
 class RequestTest extends \PHPUnit\Framework\TestCase
 {
@@ -23,7 +23,7 @@ class RequestTest extends \PHPUnit\Framework\TestCase
     {
         $request = Request::createFromRequest($this->baseRequest);
 
-        $this->assertInstanceOf('OAuth2\ZendHttpPhpEnvironmentBridge\Request', $request);
+        $this->assertInstanceOf('OAuth2\LaminasHttpPhpEnvironmentBridge\Request', $request);
     }
 
     public function testRequestHasQueryMethod(): void

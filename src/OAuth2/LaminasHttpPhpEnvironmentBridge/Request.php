@@ -1,8 +1,8 @@
 <?php
 
-namespace OAuth2\ZendHttpPhpEnvironmentBridge;
+namespace OAuth2\LaminasHttpPhpEnvironmentBridge;
 
-use Zend\Http\PhpEnvironment\Request as BaseRequest;
+use Laminas\Http\PhpEnvironment\Request as BaseRequest;
 use OAuth2\RequestInterface;
 
 class Request extends BaseRequest implements RequestInterface
