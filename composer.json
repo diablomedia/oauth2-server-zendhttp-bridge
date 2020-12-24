@@ -30,7 +30,7 @@
         "bshaffer/oauth2-server-php": "^1.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "2.16.7",
+        "friendsofphp/php-cs-fixer": "2.17.3",
         "phpstan/phpstan": "0.12.52",
         "phpunit/phpunit": "^8.0"
     },
