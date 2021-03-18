@@ -49,8 +49,6 @@ jobs:
                   composer update --no-progress --no-suggest --prefer-stable --optimize-autoloader ${{ matrix.composer-args }}
             - name: PHPStan
               run: composer phpstan
-            - name: Psalm
-              run: composer psalm -- --output-format=checkstyle | cs2pr
             - name: Code Style Check
               run: composer style-check -- --format=checkstyle | cs2pr
             - name: Test
