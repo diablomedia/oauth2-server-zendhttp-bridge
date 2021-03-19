@@ -45,8 +45,12 @@ class Response extends BaseResponse implements ResponseInterface
         );
     }
 
-    public function setRedirect($statusCode = 302, $url, $state = null, $error = null, $errorDescription = null, $errorUri = null)
+    public function setRedirect($statusCode, $url, $state = null, $error = null, $errorDescription = null, $errorUri = null)
     {
+        if (!$statusCode) {
+            $statusCode = 302;
+        }
+
         $this->setStatusCode($statusCode);
         $this->addParameters(
             array_filter(
