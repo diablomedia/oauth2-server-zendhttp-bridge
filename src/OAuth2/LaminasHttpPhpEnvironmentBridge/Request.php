@@ -25,7 +25,8 @@ class Request extends BaseRequest implements RequestInterface
     public function headers($name, $default = null)
     {
         $headers = $this->getHeaders($name, $default);
-        if (method_exists($headers, 'toString')) {
+        // $headers may not be a string or object depending on the default value
+        if (is_object($headers) && method_exists($headers, 'toString')) {
             return $headers->toString();
         }
 
