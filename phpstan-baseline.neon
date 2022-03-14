@@ -1,7 +1,7 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Parameter \\#1 \\$object(_or_class)? of function method_exists expects object\\|string, ArrayIterator\\|bool\\|Laminas\\\\Http\\\\Header\\\\HeaderInterface\\|Laminas\\\\Http\\\\Headers given\\.$#"
+			message: "#^Parameter \\#1 \\$cookie of method Laminas\\\\Http\\\\PhpEnvironment\\\\Request\\:\\:setCookies\\(\\) expects array\\<string, string\\>\\|string, bool\\|Laminas\\\\Http\\\\Header\\\\Cookie given\\.$#"
 			count: 1
 			path: src/OAuth2/LaminasHttpPhpEnvironmentBridge/Request.php
 
