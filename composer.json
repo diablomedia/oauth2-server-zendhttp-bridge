@@ -30,7 +30,7 @@
         "bshaffer/oauth2-server-php": "^1.10"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "3.8.0",
+        "friendsofphp/php-cs-fixer": "3.14.3",
         "phpstan/phpstan": "1.8.0",
         "phpunit/phpunit": "^9.5.10",
         "maglnet/composer-require-checker": "^3.0.0",
