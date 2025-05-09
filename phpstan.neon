@@ -1,10 +1,11 @@
 includes:
     - phpstan-baseline.neon
 parameters:
-    checkMissingIterableValueType: false
     level: 8
     paths:
         - ./
     excludePaths:
         - ./vendor/*
     ignoreErrors:
+        -
+            identifier: missingType.iterableValue
